@@ -1,28 +1,30 @@
 import "./App.css";
-import { useState } from "react";
+import ExampleUseRef from "./Components/ExampleUseRef";
+// import { useState } from "react";
+// import HandleMultipleInputs from "./Components/HandleMultipleInputs";
 
 function App() {
-  const [usernamee, setUsernamee] = useState("");
-  function handleUsername(e) {
-    console.log(usernamee);
-    setUsernamee(e.target.value);
-  }
+  // const [usernamee, setUsernamee] = useState("");
+  // function handleUsername(e) {
+  //   console.log(usernamee);
+  //   setUsernamee(e.target.value);
+  // }
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    console.log("Form Submitted  Hello ", usernamee, password);
-  }
+  // function handleSubmit(e) {
+  //   e.preventDefault();
+  //   console.log("Form Submitted  Hello ", usernamee, passsword);
+  // }
 
-  const [password, setPassword] = useState("");
+  // const [passsword, setPassword] = useState("");
 
-  function handlePassword(e) {
-    setPassword(e.target.value);
-  }
+  // function handlePassword(e) {
+  //   setPassword(e.target.value);
+  // }
 
-  const [gender, setGender] = useState("male");
+  // const [gender, setGender] = useState("male");
   return (
     <div>
-      <h1>Form Tutorial</h1>
+      {/* <h1>Form Tutorial</h1>
       <form onSubmit={handleSubmit}>
         <div>
           {" "}
@@ -36,12 +38,12 @@ function App() {
         </div>
 
         <div>
-          <label htmlFor="password"> Password: </label>
+          <label htmlFor="passsword"> Passsword: </label>
 
           <input
-            type="password"
-            id="password"
-            value={password}
+            type="passsword"
+            id="passsword"
+            value={passsword}
             onChange={handlePassword}
           />
         </div>
@@ -49,7 +51,6 @@ function App() {
         <button type="submit"> Submit </button>
       </form>
       <h1> Radio Button</h1>
-
       <div>
         <label htmlFor="Male"> Male</label>
         <input
@@ -60,16 +61,24 @@ function App() {
           }}
         />
       </div>
+      <div>
+        <label htmlFor="Female">Female</label>
+        <input
+          type="radio"
+          checked={gender === "female"}
+          onChange={() => {
+            setGender("female");
+          }}
+        />
+      </div>
+      <br></br>
+      handlemultpleinputs
+      <HandleMultipleInputs /> */}
 
-      <div></div>
-      <label htmlFor="Female">Female</label>
-      <input
-        type="radio"
-        checked={gender === "female"}
-        onChange={() => {
-          setGender("female");
-        }}
-      />
+      {/* 
+      Form input using userefhook */}
+
+      <ExampleUseRef />
     </div>
   );
 }
